@@ -1,0 +1,29 @@
+Thuật toán này giả định rằng đồ thị được biểu diễn bằng danh sách kề.
+
+def dem_cac_canh_song_song(graph):
+    # Khởi tạo count bằng 0
+    count = 0
+
+    # Với mỗi đỉnh trong đồ thị
+    for dinh in graph:
+        # Lấy danh sách các đỉnh kề
+        dinh_ke = graph[dinh]
+
+        # Tạo một tập hợp để lưu trữ các đỉnh đã truy cập
+        da_truy_cap = set()
+
+        # Với mỗi đỉnh kề
+        for dinh_ke in dinh_ke:
+            # Nếu đỉnh này đã được truy cập trước đó, nó là một cạnh song song
+            if dinh_ke in da_truy_cap:
+                count += 1
+            else:
+                # Đánh dấu đỉnh này đã được truy cập
+                da_truy_cap.add(dinh_ke)
+
+    # Vì mỗi cạnh được đếm hai lần (một lần cho mỗi đỉnh), chúng ta chia count cho 2
+    return count // 2
+
+Ý tưởng: lặp qua mỗi đỉnh trong đồ thị, và với mỗi đỉnh, nó lặp qua các đỉnh kề của nó. Nếu nó gặp một đỉnh kề mà nó đã thấy trước đó, nó tăng một bộ đếm. Vì mỗi cạnh được đếm hai lần (một lần cho mỗi đỉnh), số lượng cuối cùng được chia cho 2.
+
+Độ phức tạp thời gian của thuật toán này là O(V + E), trong đó V là số lượng đỉnh và E là số lượng cạnh, tức là tuyến tính theo kích thước của đồ thị. Vì mỗi đỉnh và mỗi cạnh chỉ được truy cập đúng một lần. Độ phức tạp không gian là O(V), được sử dụng để lưu trữ các đỉnh đã truy cập cho mỗi đỉnh trong đồ thị.

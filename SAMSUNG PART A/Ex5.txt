@@ -1,0 +1,7 @@
+Giả sử chúng ta có một đồ thị G liên thông không có điểm khớp và có hai đỉnh tùy ý s và t trong G. Chúng ta cần chứng minh rằng có hai đường đi rời nhau từ s đến t.
+
+Vì G được kết nối nên tồn tại ít nhất một đường đi từ s đến t. Hãy gọi đường đi này là P.
+
+Nếu P là đường đi duy nhất từ ​​s đến t thì bất kỳ đỉnh v nào trong P (trừ s và t) sẽ là một điểm khớp nối, vì việc loại bỏ nó sẽ ngắt kết nối s và t. Nhưng chúng ta biết rằng G không có điểm khớp nối nên phải tồn tại một đường Q khác từ s đến t không trùng với P.
+
+Do đó, chúng ta đã chỉ ra rằng với hai đỉnh s và t bất kỳ trong đồ thị liên thông G không có điểm khớp nối, có hai đường đi rời nhau giữa s và t. Do đó, G là liên thông đôi. 

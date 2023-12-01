@@ -1,0 +1,11 @@
+Một đồ thị là lưỡng cực khi và chỉ khi nó không chứa một chu trình có độ dài lẻ.
+
+Phần 1: Nếu đồ thị là đồ thị lưỡng cực thì nó không chứa chu trình có độ dài lẻ.
+
+Giả sử ngược lại, tồn tại một đồ thị hai bên chứa chu trình có độ dài lẻ. Đồ thị lưỡng cực có thể có hai màu sao cho không có hai đỉnh liền kề nào có cùng màu. Nếu chúng ta bắt đầu tô màu một chu trình có độ dài lẻ, chúng ta sẽ gặp phải sự mâu thuẫn vì đỉnh đầu và đỉnh cuối sẽ giống nhau nhưng chúng sẽ có màu khác nhau. Điều này mâu thuẫn với giả định của chúng tôi rằng đồ thị là lưỡng cực. Do đó, đồ thị hai bên không thể chứa chu trình có độ dài lẻ.
+
+Phần 2: Nếu một đồ thị không chứa chu trình có độ dài lẻ thì đó là đồ thị lưỡng cực.
+
+Giả sử ngược lại, tồn tại một đồ thị không chứa chu trình có độ dài lẻ nhưng không phải là đồ thị lưỡng cực. Bắt đầu ở bất kỳ đỉnh nào và tô màu nó. Sau đó, tô màu tất cả các hàng xóm của nó bằng màu khác. Tiếp tục quá trình này, luôn tô màu một đỉnh bằng màu đối diện với màu gốc của nó. Nếu tại bất kỳ thời điểm nào chúng ta gặp một đỉnh đã được tô màu và màu của nó giống với đỉnh hiện tại thì sẽ có một chu kỳ có độ dài lẻ. Nhưng điều này mâu thuẫn với giả định của chúng ta rằng đồ thị không chứa chu trình có độ dài lẻ. Do đó, nếu một đồ thị không chứa chu trình có độ dài lẻ thì nó phải là đồ thị lưỡng cực.
+
+Do đó, một đồ thị là lưỡng cực khi và chỉ khi nó không chứa một chu trình có độ dài lẻ. 
