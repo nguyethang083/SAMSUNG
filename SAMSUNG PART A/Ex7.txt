@@ -1,0 +1,24 @@
+def flood_fill(image, x, y, new_color):
+    # Get the original color of the pixel at (x, y)
+    orig_color = image[x][y]
+
+    # If the original color is the same as the new color, no need to fill
+    if orig_color == new_color:
+        return
+
+    # Call the helper function to fill the area
+    fill(image, x, y, orig_color, new_color)
+
+def fill(image, x, y, orig_color, new_color):
+    # If the pixel is out of bounds or is not the original color, return
+    if x < 0 or x >= len(image) or y < 0 or y >= len(image[0]) or image[x][y] != orig_color:
+        return
+
+    # Fill the pixel with the new color
+    image[x][y] = new_color
+
+    # Recursively fill the neighboring pixels
+    fill(image, x-1, y, orig_color, new_color)
+    fill(image, x+1, y, orig_color, new_color)
+    fill(image, x, y-1, orig_color, new_color)
+    fill(image, x, y+1, orig_color, new_color)
