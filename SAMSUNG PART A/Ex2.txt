@@ -1,5 +1,0 @@
-Một đồ thị với V đỉnh, có C2V = V*(V-1)/2 cạnh có thể có. Điều này bởi vì mỗi cạnh được xác định bởi một cặp đỉnh, và có C2V cách để chọn 2 đỉnh từ V.
-
-Nếu chúng ta muốn tạo một đồ thị với E cạnh, chúng ta cần chọn E cạnh từ những cạnh có thể có này. Số cách để làm điều này được cho bởi hệ số tổ hợp CE(C2V)
-
-Vì vậy, số lượng các đồ thị không hướng khác nhau với V đỉnh và E cạnh (không có cạnh song song) là CE(C2V)
